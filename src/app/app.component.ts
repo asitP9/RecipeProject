@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { collectExternalReferences } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipeProject';
+  itemClicked:string;
+  navigationClicked(item:string){
+    this.itemClicked=item;
+  }
 }
