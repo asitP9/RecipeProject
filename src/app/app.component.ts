@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-import { collectExternalReferences } from '@angular/compiler';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
+
 })
-export class AppComponent {
+export class AppComponent{
   title = 'recipeProject';
   itemClicked:string;
   navigationClicked(item:string){
     this.itemClicked=item;
   }
+
+
+
+
 }
