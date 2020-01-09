@@ -18,6 +18,12 @@ export class RecipeService implements OnInit {
 
   }
   getRecipes(){
+    // slice makes the copy of the recipe
     return this.recipes.slice();
+  }
+
+  getRecipe(index:number){
+    // here we dont need slice because slice will make the copy but not deep copy.
+    return this.recipes[index];
   }
 }

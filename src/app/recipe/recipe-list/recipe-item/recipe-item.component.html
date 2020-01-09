@@ -1,4 +1,4 @@
-<a  class="list-group-item clearfix" (click)="itemClicked();">
+<a  class="list-group-item clearfix pointerCursor" [routerLink]="['/recipe',indexItem]" routerLinkActive="active">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{perItem.name}}</h4>
         <p class="list-group-item-text">{{perItem.description}}</p>

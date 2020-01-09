@@ -5,16 +5,16 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#" (click)="navigationClicked('recipe')">Recipes</a></li>
-                <li><a href="#" (click)="navigationClicked('shoppingList')">Shopping List</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="recipe" >Recipes</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="shopping-list" >Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 
                 <li class="dropdown" appDropdowndirective>
-                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">Manage<span class="caret"></span></a>
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown" class="pointerCursor">Manage<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Save Data</a></li>
-                    <li><a href="#">Fetch Data</a></li>
+                    <li><a class="pointerCursor">Save Data</a></li>
+                    <li><a class="pointerCursor">Fetch Data</a></li>
                 </ul>
                 </li>
             </ul>
