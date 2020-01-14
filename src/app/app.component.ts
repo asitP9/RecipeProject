@@ -10,11 +10,4 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 export class AppComponent{
   title = 'recipeProject';
   itemClicked:string;
-  navigationClicked(item:string){
-    this.itemClicked=item;
   }
-
-
-
-
-}

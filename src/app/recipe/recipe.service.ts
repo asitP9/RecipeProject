@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter, OnInit } from '@angular/core';
+import { OnInit } from '@angular/core';
 import {recipe} from './recipe.model'
 import { ingredient } from '../shared/ingredient.model';
 
@@ -12,7 +12,6 @@ export class RecipeService implements OnInit {
                     "What else you need to say",
                     "../assets/recipe2seafoodSoup.jpg",
                     [new ingredient("buns",2), new ingredient("meat",1)])];
-  recipeSelected=new EventEmitter<recipe>();
   constructor() { }
   ngOnInit(){
 
