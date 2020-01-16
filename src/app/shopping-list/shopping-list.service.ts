@@ -10,7 +10,7 @@ export class ShoppingListService{
 
   getIngredients(){
     // this is the copy of the array so that original wont be touched
-    return this.ingredients;
+    return this.ingredients.slice();
   }
 
   getIngredient(index:number){

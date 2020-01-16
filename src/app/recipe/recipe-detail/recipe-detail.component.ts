@@ -3,6 +3,7 @@ import {ShoppingListService} from '../../shopping-list/shopping-list.service';
 import {ingredient} from '../../shared/ingredient.model';
 import {RecipeService} from '../recipe.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
+import { recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -38,9 +39,13 @@ export class RecipeDetailComponent implements OnInit {
     //   );
   }
 
+  deleteRecipe(){    
+    this.myRecipeList.removeRecipe(this.idParams);
+    this.router.navigate(['../'],{relativeTo:this.route});
+  }
  
-  // passDataToShoppingList(){
+  passDataToShoppingList(){
 
-  //   this.myShoppingList.addIngredientsFromRecipe(this.selrecipe.ingredients);
-  // }
+    this.myShoppingList.addIngredientsFromRecipe(this.selrecipe.ingredients);
+  }
 }
