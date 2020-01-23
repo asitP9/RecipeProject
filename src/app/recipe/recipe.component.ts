@@ -13,7 +13,9 @@ export class RecipeComponent implements OnInit {
   constructor(private myRecipeService:RecipeService) { }
 
   ngOnInit() {
-
+    // if(localStorage.getItem('idToken')){
+      
+    // }
     // this.myRecipeService.recipeSelected.subscribe(
     //   (recipeTemp:recipe)=>{
     //       this.selectedRecipe=recipeTemp;
