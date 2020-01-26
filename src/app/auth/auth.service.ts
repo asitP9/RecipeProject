@@ -87,14 +87,12 @@ export class AuthService{
       }
 
       logout(){
-        debugger;
         this.user.next(null);
         this.router.navigate(['/auth']);
         localStorage.removeItem('respData');
       }
 
       autoLogin(){
-        debugger;
         const respData=JSON.parse(localStorage.getItem('respData'));
 
         if(!respData){
@@ -112,17 +110,9 @@ export class AuthService{
       autoLogout(expirationDuration:number){
         setTimeout(
           ()=>{ 
-            debugger;
             this.logout();
-          }, 2000);
+          }, expirationDuration);
       }
 
-      isUserLoggedIn(){
-        const promise=new Promise(
-          (resolve, reject)=>{
-
-          }
-        )
-
-      }
+     
     }

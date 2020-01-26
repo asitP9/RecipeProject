@@ -8,7 +8,6 @@ export class DropdowndirectiveDirective implements OnInit {
 
   @HostBinding('class.open') isOpen:boolean=false;
   constructor(private elRef:ElementRef, private renderer:Renderer2) { 
-
   }
 
   ngOnInit(){
@@ -17,6 +16,8 @@ export class DropdowndirectiveDirective implements OnInit {
 
 // Also if u want the dropdown to close on clicking of any other place in the page there is a hack as below
   @HostListener('document:click',['$event']) toggleOpen(event:Event) {
+    debugger;
+    // this.isOpen=!this.isOpen;
     // if(!this.isOpen)
     //   this.renderer.addClass(this.elRef.nativeElement,'open');
     // else

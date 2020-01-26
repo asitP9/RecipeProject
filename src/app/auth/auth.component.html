@@ -1,6 +1,8 @@
+<ng-template appPlaceHolder></ng-template>
 <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <div class="alert alert-danger" *ngIf="error">{{error}}</div>
+        <!-- <div class="alert alert-danger" *ngIf="error">{{error}}</div> -->
+        <!-- <app-alert [message]="authError" (closeComponent)="closeComponent(event)" *ngIf="authError" ></app-alert> -->
         <app-loading-spinner *ngIf="isLoading" style="text-align:center"></app-loading-spinner>
         <form (ngSubmit)="authenticateUser();" #auth="ngForm" *ngIf="!isLoading">
             <div class="form-group">
