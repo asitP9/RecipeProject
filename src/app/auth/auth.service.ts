@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
-import { throwError, Subject, BehaviorSubject } from 'rxjs';
+import { throwError, BehaviorSubject } from 'rxjs';
 import { User } from './auth.model';
-import { Router, ActivatedRoute } from '@angular/router';
-
+import { Router } from '@angular/router';
+import {environment} from '../../environments/environment';
 
 export interface authResponseData{
     idToken:string;
@@ -22,7 +22,7 @@ export class AuthService{
   errorMsg:string;
     constructor(private http:HttpClient, private router:Router){}
     loginExistingUser(username:string, password:string){
-      return this.http.post<authResponseData>("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBOEXvBz5m8mKA91_XKmLoRjUfrQSfss74",
+      return this.http.post<authResponseData>("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="+environment.fireBaseAPIKey,
       {                            
         email:username,
         password:password,
@@ -41,7 +41,7 @@ export class AuthService{
     authenticateNewUser(username:string, password:string){
         return this.http
         .post<authResponseData>("https://identitytoolkit.googleapis.com/v1/accounts:signUp"+
-        "?key=AIzaSyBOEXvBz5m8mKA91_XKmLoRjUfrQSfss74",
+        "?key="+ environment.fireBaseAPIKey,
         {                            
                 email:username,
                 password:password,

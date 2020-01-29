@@ -7,11 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import {RecipeModule} from './recipe/recipe.module';
-import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import {CoreServiceModule} from './core-service.module';
-import {AuthModule} from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -23,10 +20,8 @@ import {AuthModule} from './auth/auth.module';
     BrowserModule,    
     routingAppModule,
     HttpClientModule,
-    ShoppingListModule,
     SharedModule,
     CoreServiceModule,
-    AuthModule
     
   ],
   bootstrap: [AppComponent]
